@@ -9,7 +9,7 @@ Version control is how we track and manage changes to projects. It is useful bec
 * What is a branch and why would you use one?
 
 A branch is essentially a copy of the master code that can be edited to ensure that the changes will work without having to test them on the origional code. A branch is basically a rough draft where you can make edits to the final product and test them to make sure they are working as intended before adding them to the final code.
-
+chicken
 * What is a commit? What makes a good commit message?
 
 A commit is when you add a new piece of code to the branch you are working on. It acts as a save point that you can roll back to in the future. A good commit message is short and clearly says what that commit is adding to the code. That way another dev can read through the timeline of commit messages and easily follow how the final code was built, piece by piece.
