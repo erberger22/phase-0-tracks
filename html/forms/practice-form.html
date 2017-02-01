@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vacation form</title>
+</head>
+<body>
+<form name="adventure" action="success.html" method="post">
+  <fieldset>
+    <div>
+      <label>User name:</label>
+      <input type="text" name="fullname">
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email">
+    </div>
+
+    <div>
+      <label>Password:</label>
+      <input type="password" name="password">
+    </div>
+  </fieldset>
+
+  <fieldset>
+
+    <div>
+      <label>Vacation Location:</label>
+      <select name="Vacation location">
+        <option value="Bali">Bali</option>
+        <option value="Bejing">Bejing</option>
+        <option value="Paris">Paris</option>
+      </select>
+    </div>
+
+    <div>
+      <input type="checkbox" name="cb-agree" value="agree">
+      I am prepared to lead this adventure.
+    </div>
+  </fieldset>
+  <fieldset>
+  	<textarea rows="4" cols="50">Any other details about your vacation that we should know?</textarea>
+  </fieldset>
+  <button type="submit">Take me on vacation</button>
+</form>
+</body>
+</html>
