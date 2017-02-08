@@ -11,3 +11,9 @@
 .list{
   font-size: .8em;
 }
+.email:hover {
+	color: #ff0000;
+}
+section >h2 {
+	background-color: green;
+}
