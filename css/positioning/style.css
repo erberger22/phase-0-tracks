@@ -1,10 +1,8 @@
 body{
 	position: relative;
 	left: 40%;
-	width: 100px;
-    
+	width: 100px;   
 }
-
 
 #body{
 	z-index: -1;
