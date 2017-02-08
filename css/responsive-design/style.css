@@ -75,6 +75,25 @@ main > h1 {
   font-size: 60%;
 }
 }
+
+@media screen and (max-width: 500px) {
+  #external-links {
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid black;
+    padding: 20px;
+  }
+}
+ @media screen and (max-width: 500px) {
+  main {
+    margin-left: 9em;
+    margin-right: 10px;
+  }
+ }
+
 /*@media screen and (max-width: 500px) {
   body {
     background-color: hotpink;
