@@ -45,3 +45,38 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+@media screen and (max-width: 600px) {
+main > h1 {
+  font-size: 90%;
+}
+}
+
+@media screen and (max-width: 550px) {
+main > h1 {
+  font-size: 80%;
+}
+}
+
+@media screen and (max-width: 520px) {
+main > h1 {
+  font-size: 70%;
+}
+}
+
+
+@media screen and (max-width: 510px) {
+main > h1 {
+  font-size: 63%;
+}
+}
+
+@media screen and (max-width: 500px) {
+main > h1 {
+  font-size: 60%;
+}
+}
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
