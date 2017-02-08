@@ -1,3 +1,7 @@
+body{
+  max-width: 960px;
+  margin: auto;
+}
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -9,9 +13,21 @@ cite {
   margin-top: 10px;
 }
 
-#external-links ul {
+main{
+  width: 60%;
+  margin-left: 30px;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 20px;
+}
+
+#external-links {
   list-style-type: none;
   padding-left: 0px;
+  padding-right: 20px;
+  max-width: 12%;
+  display: inline-block;
+  vertical-align: top
 }
 
 /* you're welcome to edit the
@@ -30,3 +46,57 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+@media screen and (max-width: 600px) {
+main > h1 {
+  font-size: 90%;
+}
+}
+
+@media screen and (max-width: 550px) {
+main > h1 {
+  font-size: 80%;
+}
+}
+
+@media screen and (max-width: 520px) {
+main > h1 {
+  font-size: 70%;
+}
+}
+
+
+@media screen and (max-width: 510px) {
+main > h1 {
+  font-size: 63%;
+}
+}
+
+@media screen and (max-width: 500px) {
+main > h1 {
+  font-size: 60%;
+}
+}
+
+@media screen and (max-width: 500px) {
+  #external-links {
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid black;
+    padding: 20px;
+  }
+}
+ @media screen and (max-width: 500px) {
+  main {
+    margin-left: 9em;
+    margin-right: 10px;
+  }
+ }
+
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
