@@ -4,7 +4,15 @@ Using the Elevator
 		-if responsive is “no” move up to the next button
 		-if response is “yes” press current button
 
-
+Folding a towel
+-pick up towel in both hands
+-move both hands along towel together until they reach an edge (side a)
+-move hands away from each other 
+	-continue to move each hand until it reaches the end of side a (each hand on a corner)
+		-bring corners together
+		-hold corners together with right hand and move left hand along vertical edge until it reaches a corner
+		-bring corners together
+		
 
 
 
