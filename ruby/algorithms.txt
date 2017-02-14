@@ -1,0 +1,10 @@
+Using the Elevator
+-Locate the bottom most button in the elevator
+	-ask “is your room on floor {symbol on button}?”
+		-if responsive is “no” move up to the next button
+		-if response is “yes” press current button
+
+
+
+
+
