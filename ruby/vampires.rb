@@ -1,3 +1,8 @@
+puts "how many employees will be processed today?"
+number_applicants=gets.chomp
+number_applicants=number_applicants.to_i
+applicants_processed=0
+until applicants_processed==number_applicants
 puts "what is your name?"
 name_applicant=gets.chomp
 puts "how old are you? (in years)"
@@ -31,5 +36,7 @@ when age_applicant!=(2017-year_born)&& (garlic_preference=="no"||health_applican
 
 else
 	puts "the results are inconclusive"
+end
+applicants_processed +=1
 end
 
