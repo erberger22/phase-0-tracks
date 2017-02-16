@@ -41,6 +41,10 @@ def decrypt (encrypted_password)
 end
 
 p decrypt(encrypt("swordfish"))
+=begin This nested method worked because it used order of operations to solve for the
+encrypt method within the () first and then called the decrypt method on the encrypted 
+result of encrypt method 
+=end
 
 
 
