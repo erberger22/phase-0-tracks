@@ -24,7 +24,7 @@ def encrypt (password)
 		encrypted_password += encrypted_letter
 		index += 1
 	end
-	p encrypted_password
+	#p encrypted_password
 end
 
 def decrypt (encrypted_password)
@@ -37,10 +37,10 @@ def decrypt (encrypted_password)
 		decrypted_password += key[decrypted_index]
 		index += 1
 	end
-	p decrypted_password
+	#p decrypted_password
 end
 
-p decrypt(encrypt("swordfish"))
+#p decrypt(encrypt("swordfish"))
 =begin This nested method worked because it used order of operations to solve for the
 encrypt method within the () first and then called the decrypt method on the encrypted 
 result of encrypt method 
