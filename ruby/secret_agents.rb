@@ -40,6 +40,7 @@ def decrypt (encrypted_password)
 	p decrypted_password
 end
 
+p decrypt(encrypt("swordfish"))
 
 
 
