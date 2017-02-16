@@ -13,3 +13,14 @@
 	-puts decrypted string
 profit
 =end
+def encrypt (password)
+	index=0
+	encrypted_password=""
+	while index < password.length
+		encrypted_password += password[index].next
+		index += 1
+	end
+	p encrypted_password
+end
+
+		
