@@ -17,10 +17,32 @@ def encrypt (password)
 	index=0
 	encrypted_password=""
 	while index < password.length
-		encrypted_password += password[index].next
+		encrypted_letter = password[index].next
+		if encrypted_letter=="aa"
+			encrypted_letter="a"
+		end
+		encrypted_password += encrypted_letter
 		index += 1
 	end
 	p encrypted_password
 end
+
+def decrypt (encrypted_password)
+	index=0
+	key="abcdefghijklmnopqrstuvwxyz"
+	decrypted_password=""
+	while index < encrypted_password.length
+		letter = encrypted_password[index]
+		decrypted_index=key.index(letter)-1
+		decrypted_password += key[decrypted_index]
+		index += 1
+	end
+	p decrypted_password
+end
+
+
+
+
+
 
 		
