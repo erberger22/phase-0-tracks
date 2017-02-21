@@ -46,6 +46,8 @@ client ={
 		if answer == "y"
 			client[:allergies]=allergies_question
 		end
+	puts "How will services be payed for? Cash, check, credit, or barter"
+	client[:payment_method]=gets.chomp
 
 
 p client
