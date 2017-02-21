@@ -12,7 +12,12 @@ decor theme, allergies, payment method
 =end
 
 client ={
-
+	name: nil, 
+	age: nil,
+	num_child: nil,
+	theme: ["plain", "plaid", "leapord"],
+	allergies: nil,
+	payment_method: nil
 }
 
 	puts "Name:"
@@ -21,8 +26,9 @@ client ={
 	client[:age]=gets.chomp.to_i
 	puts "How many children?"
 	client[:num_child]=gets.chomp.to_i
-	puts "Decor theme?"
+	puts "Choose one of our themes: plain, plaid, leapord"
 	client[:theme]=gets.chomp
+	
 	
 
 p client
