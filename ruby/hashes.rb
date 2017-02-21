@@ -15,7 +15,7 @@ client ={
 	name: nil, 
 	age: nil,
 	num_child: nil,
-	theme: ["plain", "plaid", "leapord"],
+	theme: nil,
 	allergies: ["none"],
 	payment_method: nil
 }
@@ -49,8 +49,22 @@ client ={
 	puts "How will services be payed for? Cash, check, credit, or barter"
 	client[:payment_method]=gets.chomp
 
+puts client
 
-p client
+puts "Do any of these answers need to be changed? If yes enter the field that needs changing, if no enter 'none'"
+double_check=gets.chomp
+	if double_check=="none"
+	puts "Thank you for entering all that info!"
+	
+	elsif double_check=="allergies"
+	puts "Re-enter all allergies"	
+	client[:allergies]=allergies_question
+	puts client
+	else
+	puts "Please update your answer"
+	client[double_check.to_sym]=gets.chomp
+	puts client
+end
 
 
 
