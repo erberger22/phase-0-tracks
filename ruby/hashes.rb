@@ -12,10 +12,21 @@ decor theme, allergies, payment method
 =end
 
 client ={
-	name: , 
-	age: ,
-	number_of_children: ,
-	decor_theme: ,
-	allergies: [], 
-	payment_method: 
+
 }
+
+	puts "Name:"
+	client[:name]=gets.chomp
+	puts "Age:"
+	client[:age]=gets.chomp.to_i
+	puts "How many children?"
+	client[:num_child]=gets.chomp.to_i
+	puts "Decor theme?"
+	client[:theme]=gets.chomp
+	
+
+p client
+
+
+
+
