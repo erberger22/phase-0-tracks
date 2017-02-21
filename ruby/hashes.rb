@@ -45,7 +45,6 @@ client ={
 	answer=gets.chomp
 		if answer == "y"
 			client[:allergies]=allergies_question
-		else
 		end
 
 
