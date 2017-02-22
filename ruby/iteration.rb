@@ -1,5 +1,3 @@
-
-=begin
 #Release 0
 
 def farwell
@@ -36,7 +34,6 @@ end
 
 p bears
 
-=end
 #Release 2
 
 array_num = [2, 55, 3, 2, 67, 34]
