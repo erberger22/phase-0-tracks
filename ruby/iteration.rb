@@ -1,4 +1,3 @@
-=begin
 def farwell
 	puts "Bye-bye"
 	yield ("alligator")
@@ -6,7 +5,7 @@ def farwell
 end
 
 farwell { |phrase| puts "see you later, #{phrase}" }
-=end
+
 birds = ["ostrich", "emuu", "penguin", "kiwi"]
 
 bears = {"grizzley" => "scary", "polar" => "scary", "the pooh" => "not scary"}
@@ -23,4 +22,11 @@ birds.map! do |bird|
 end
 
 p birds
+
+p bears 
+bears.each do |bear, is_scary|
+	puts "scientists say that #{bear} is conclusively #{is_scary}"
+end
+
+p bears
 
