@@ -12,8 +12,43 @@
 	-put each character into new array?
 =end
 
-def code_name (real_name)
+def secret_alias (real_name)
 	vowels=["a","e","i","o","u"]
 	consonents=["b","c","d","f","g","h","j","k","l","m","n",
 				"p","q","r","s","t","v","w","x","y","z"]
+
+	#first and last names are split, swapped, then reconnected
+
+	swapped_name = real_name.split(' ').reverse.join(' ')
+
+	swapped_name_chars = swapped_name.chars
+
+	code_name_chars = []
+	counter = 0
+	until counter == swapped_name_chars.length
+		if vowels.include?(swapped_name_chars[counter].downcase)
+			code_name_chars.push(
+				vowels[
+					(vowels.index(swapped_name_chars[counter].downcase)+1)
+				]
+			)
+			counter += 1
+		elsif consonents.include?(swapped_name_chars[counter].downcase)
+			code_name_chars.push(
+				consonents[
+					(consonents.index(swapped_name_chars[counter].downcase)+1)
+				]
+			)
+			counter += 1
+		else
+			code_name_chars.push(swapped_name_chars[counter])
+			counter += 1
+		end	
+	end
+	code_name = code_name_chars.join('')
 end
+
+p secret_alias ("Eli Berger")
+
+
+
