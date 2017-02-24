@@ -13,10 +13,10 @@
 =end
 
 def secret_alias (real_name)
+
 	vowels=["a","e","i","o","u"]
 	consonents=["b","c","d","f","g","h","j","k","l","m","n",
 				"p","q","r","s","t","v","w","x","y","z"]
-
 	#first and last names are split, swapped, then reconnected
 
 	swapped_name = real_name.split(' ').reverse.join(' ')
@@ -26,17 +26,25 @@ def secret_alias (real_name)
 	code_name_chars = []
 	counter = 0
 	until counter == swapped_name_chars.length
+		
+		#if letter is included in vowels array, adds next value in vowels 
+		#array to code_name_chars array
+
 		if vowels.include?(swapped_name_chars[counter].downcase)
 			code_name_chars.push(
 				vowels[
-					(vowels.index(swapped_name_chars[counter].downcase)+1)
+					(vowels.index(swapped_name_chars[counter].downcase).next)
 				]
 			)
 			counter += 1
+		
+		#if letter is included in consonents array, adds next value in 
+		#consonents array to code_name_chars array
+
 		elsif consonents.include?(swapped_name_chars[counter].downcase)
 			code_name_chars.push(
 				consonents[
-					(consonents.index(swapped_name_chars[counter].downcase)+1)
+					(consonents.index(swapped_name_chars[counter].downcase).next)
 				]
 			)
 			counter += 1
@@ -50,5 +58,5 @@ end
 
 p secret_alias ("Eli Berger")
 
-
+#need to recapitalize first letters of each name, and fix edge case errors
 
