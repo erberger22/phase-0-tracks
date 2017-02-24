@@ -5,11 +5,11 @@ mall = {
 			"tripple berry",
 			"mango pineapple",
 			"orange",
-			boosts:[
+			{boosts:[
 				"energy",
 				"protein",
 				"bananna"
-			]
+			]}
 		],
 		clothing:{
 			shirt: "t-shirt",
@@ -86,7 +86,7 @@ p mall[:REI][:clothing][:shirt][4]
 #should call ["Classic Roll","Minibon","Cinnabun Bites"]
 p mall[:cinnabun][:food]
 #should call "protein"
-p mall[:orange_julius][:drink][3][1]
+p mall[:orange_julius][:drink][3][:boosts][1]
 #will call the :boots array, but when I add the [1] it returns nill. ask instructor tomorrow
 
 
