@@ -87,6 +87,3 @@ p mall[:REI][:clothing][:shirt][4]
 p mall[:cinnabun][:food]
 #should call "protein"
 p mall[:orange_julius][:drink][3][:boosts][1]
-#will call the :boots array, but when I add the [1] it returns nill. ask instructor tomorrow
-
-
