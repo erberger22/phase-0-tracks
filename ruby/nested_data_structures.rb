@@ -1,5 +1,5 @@
 mall = {
-	"orange julius":{
+	orange_julius:{
 		food:[]
 		drink:[
 			"tripple berry",
@@ -11,13 +11,24 @@ mall = {
 			hat: "baseball cap"
 		}
 	}
-	"cinnabun":{
+	cinnabun:{
+		food:[
+			"Classic Roll",
+			"Minibon",
+			"Cinnabun Bites"
+		]
+		drink:[
+			"Soft Drink",
+			"Vanilla Iced Coffee",
+			"Signature Coffee"
+		]
+		clothing:{}
 
 	}
-	"REI":{
+	REI:{
 
 	}
-	"gap":{
+	gap:{
 
 	}
 		}
