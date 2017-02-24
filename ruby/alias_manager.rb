@@ -53,10 +53,16 @@ def secret_alias (real_name)
 			counter += 1
 		end	
 	end
+	# .upcase the first letter of the code name first name
+	code_name_chars[0]=code_name_chars[0].upcase
+	# .upcase the first letter of the code name last name, since it comes after a space
+	code_name_chars[code_name_chars.index(" ")+1]=code_name_chars[code_name_chars.index(" ")+1].upcase
+	
 	code_name = code_name_chars.join('')
 end
 
-p secret_alias ("Eli Berger")
+p secret_alias ("Eli Ross Berger")
 
-#need to recapitalize first letters of each name, and fix edge case errors
+
+#need to fix edge case errors
 
