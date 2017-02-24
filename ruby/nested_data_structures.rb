@@ -4,7 +4,12 @@ mall = {
 		drink:[
 			"tripple berry",
 			"mango pineapple",
-			"orange"
+			"orange",
+			boosts:[
+				"energy",
+				"protein",
+				"bananna"
+			]
 		],
 		clothing:{
 			shirt: "t-shirt",
@@ -61,7 +66,7 @@ mall = {
 				"standard",
 				"short-sleeve"
 			],
-			parts:[
+			pants:[
 				"shorts",
 				"formal",
 				"sleepware"
@@ -72,9 +77,16 @@ mall = {
 		}
 	}
 }
-
-p mall
-
-
+#should call "sleepware"
+p mall[:gap][:clothing][:pants][2]
+#should call "tripple berry"
+p mall[:orange_julius][:drink][0]
+#should call "rashguard"
+p mall[:REI][:clothing][:shirt][4]
+#should call ["Classic Roll","Minibon","Cinnabun Bites"]
+p mall[:cinnabun][:food]
+#should call "protein"
+p mall[:orange_julius][:drink][3][1]
+#will call the :boots array, but when I add the [1] it returns nill. ask instructor tomorrow
 
 
