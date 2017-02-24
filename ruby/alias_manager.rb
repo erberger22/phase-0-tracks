@@ -36,6 +36,10 @@ def secret_alias (real_name)
 					(vowels.index(swapped_name_chars[counter].downcase).next)
 				]
 			)
+			#fix edgecase error so vowel array loops around to index(0) 
+			if code_name_chars[-1]==nil
+				code_name_chars[-1]=vowels[0]
+			end
 			counter += 1
 		
 		#if letter is included in consonents array, adds next value in 
@@ -47,6 +51,10 @@ def secret_alias (real_name)
 					(consonents.index(swapped_name_chars[counter].downcase).next)
 				]
 			)
+			#fix edgecase error so consonents array loops around to index(0)
+			if code_name_chars[-1]==nil
+				code_name_chars[-1]=consonents[0]
+			end
 			counter += 1
 		else
 			code_name_chars.push(swapped_name_chars[counter])
@@ -62,7 +70,5 @@ def secret_alias (real_name)
 end
 
 p secret_alias ("Eli Ross Berger")
-
-
-#need to fix edge case errors
+p secret_alias ("Zuz Smith")
 
