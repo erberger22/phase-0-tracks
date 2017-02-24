@@ -56,6 +56,19 @@ mall = {
 		food:[],
 		drink:[],
 		clothing:{
+			shirt:[
+				"slim",
+				"standard",
+				"short-sleeve"
+			],
+			parts:[
+				"shorts",
+				"formal",
+				"sleepware"
+			],
+			hat:[
+				"fedora"
+			]
 		}
 	}
 }
