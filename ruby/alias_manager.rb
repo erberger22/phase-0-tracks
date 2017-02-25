@@ -63,12 +63,22 @@ def secret_alias (real_name)
 	end
 	# .upcase the first letter of the code name first name
 	code_name_chars[0]=code_name_chars[0].upcase
-	# .upcase the first letter of the code name last name, since it comes after a space
-	code_name_chars[code_name_chars.index(" ")+1]=code_name_chars[code_name_chars.index(" ")+1].upcase
-	
+	#find the index of all the " " characters in code_name_characters
+	space_locations = code_name_chars.each_index.select{|i| code_name_chars[i] == " "}
+	#use index of all " " characters to capitalize any characters that occur after a space,
+	#so middle names will also be capitalized
+	spaces = space_locations.length
+	capital_counter = 0
+	until capital_counter == spaces
+		code_name_chars[space_locations[0+capital_counter].to_i+1]=
+		code_name_chars[space_locations[0+capital_counter].to_i+1].upcase
+		capital_counter += 1
+	end
+
 	code_name = code_name_chars.join('')
 end
 
 p secret_alias ("Eli Ross Berger")
 p secret_alias ("Zuz Smith")
+
 
