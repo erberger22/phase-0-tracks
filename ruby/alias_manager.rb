@@ -76,17 +76,18 @@ def secret_alias (real_name)
 	end
 
 	code_name = code_name_chars.join('')
+	code_name
 end
+name_pairs = {}
 user_name = nil
 loop do 
 	puts "Enter a name to have it turned into an alias, or enter 'quit' when finished"
 	user_name = gets.chomp
 	break if user_name == "quit"||user_name == "Quit"
 	puts secret_alias(user_name)
+	name_pairs.store(user_name.to_sym , secret_alias(user_name))
 end
 
-
-
-
-
-
+name_pairs.each do |user_name, secret_alias|
+	puts "The alias of #{user_name} is #{secret_alias}"
+end
