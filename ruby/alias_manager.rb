@@ -77,8 +77,16 @@ def secret_alias (real_name)
 
 	code_name = code_name_chars.join('')
 end
+user_name = nil
+loop do 
+	puts "Enter a name to have it turned into an alias, or enter 'quit' when finished"
+	user_name = gets.chomp
+	break if user_name == "quit"||user_name == "Quit"
+	puts secret_alias(user_name)
+end
 
-p secret_alias ("Eli Ross Berger")
-p secret_alias ("Zuz Smith")
+
+
+
 
 
