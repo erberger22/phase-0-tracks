@@ -36,6 +36,10 @@ class Puppy
   	def dog_years(human_years)
   		puts 7 * human_years
   	end
+
+  	def eat_homework(dog_name, assignment)
+  		puts "#{dog_name} ate my #{assignment} homework!!"
+  	end
 end
 
 
@@ -45,6 +49,7 @@ Rex.fetch("frisbee")
 Rex.speak(3)
 Rex.rollover
 Rex.dog_years(5)
+Rex.eat_homework("Rex", "Coding")
 
 
 
