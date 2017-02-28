@@ -29,12 +29,24 @@ class Puppy
   		i.times{puts "woof"}
   	end
 
+  	def rollover
+  		puts "rolls over"
+  	end
+
+  	def dog_years(human_years)
+  		puts 7 * human_years
+  	end
 end
+
 
 Rex = Puppy.new
 
 Rex.fetch("frisbee")
 Rex.speak(3)
+Rex.rollover
+Rex.dog_years(5)
+
+
 
 
 
