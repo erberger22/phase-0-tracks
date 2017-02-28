@@ -13,7 +13,6 @@ CHARACTERISTICS
 
 BEHAVIOR
  jump
- pant
  eat
  sleep
  cuddle
