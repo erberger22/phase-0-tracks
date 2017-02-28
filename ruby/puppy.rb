@@ -55,10 +55,10 @@ Rex.rollover
 Rex.dog_years(5)
 Rex.eat_homework("Rex", "Coding")
 
-class Badger
 
+class Badger
 	def initialize
-		puts "Initializing new badger instance, because they rock..."
+		"Initializing new badger instance, because they rock..."
 	end
 
 	def dig(number_of_holes)
@@ -71,10 +71,19 @@ class Badger
 	end
 
 end
+badger_hash = {}
+counter = 0
+until counter == 50
+	badger = Badger.new
+	badger_hash["badger_#{counter}"]=[]
+	counter += 1
+end
+p badger_hash
+#Barry=Badger.new
+#Barry.dig(4)
+#Barry.gallop(3)
 
-Barry=Badger.new
-Barry.dig(4)
-Barry.gallop(3)
+
 
 
 
