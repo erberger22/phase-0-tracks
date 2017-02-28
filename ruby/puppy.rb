@@ -62,22 +62,27 @@ class Badger
 	end
 
 	def dig(number_of_holes)
-		puts "this badger has dug #{number_of_holes} holes! Amazing!"
+		p "this badger has dug #{number_of_holes} holes! Amazing!"
 	end
 
 	def gallop(distance_galloped)
-		puts "did you know badgers can gallop?"
-		distance_galloped.times{puts "gallop"}
+		p "did you know badgers can gallop? this badger galloped #{distance_galloped} miles!" 
 	end
 
 end
+
 badger_hash = {}
 counter = 0
 until counter == 50
-	badger = Badger.new
-	badger_hash["badger_#{counter}"]=[]
+	badger = Badger.new 
+	badger_hash[badger]=[]
 	counter += 1
 end
+
+badger_hash.each do |badger, actions|
+	badger_hash[badger]=[badger.gallop(3), badger.dig(2)]
+end
+
 p badger_hash
 #Barry=Badger.new
 #Barry.dig(4)
