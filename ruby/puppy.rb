@@ -18,4 +18,22 @@ BEHAVIOR
  cuddle
 =end
 
+class Puppy
+
+	def fetch(toy)
+    puts "I brought back the #{toy}!"
+    toy
+  end
+
+end
+
+Rex = Puppy.new
+
+Rex.fetch("frisbee")
+
+
+
+
+
+
 
