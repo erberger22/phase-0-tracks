@@ -40,6 +40,10 @@ class Puppy
   	def eat_homework(dog_name, assignment)
   		puts "#{dog_name} ate my #{assignment} homework!!"
   	end
+
+  	def initialize
+  		p "Initializing new puppy instance ..."
+  	end
 end
 
 
