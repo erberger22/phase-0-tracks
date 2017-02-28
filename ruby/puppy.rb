@@ -55,6 +55,28 @@ Rex.rollover
 Rex.dog_years(5)
 Rex.eat_homework("Rex", "Coding")
 
+class Badger
+
+	def initialize
+		puts "Initializing new badger instance, because they rock..."
+	end
+
+	def dig(number_of_holes)
+		puts "this badger has dug #{number_of_holes} holes! Amazing!"
+	end
+
+	def gallop(distance_galloped)
+		puts "did you know badgers can gallop?"
+		distance_galloped.times{puts "gallop"}
+	end
+
+end
+
+Barry=Badger.new
+Barry.dig(4)
+Barry.gallop(3)
+
+
 
 
 
