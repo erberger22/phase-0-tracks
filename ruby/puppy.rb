@@ -21,15 +21,20 @@ BEHAVIOR
 class Puppy
 
 	def fetch(toy)
-    puts "I brought back the #{toy}!"
-    toy
+    	puts "I brought back the #{toy}!"
+    	toy
   end
+
+  	def speak(i)
+  		i.times{puts "woof"}
+  	end
 
 end
 
 Rex = Puppy.new
 
 Rex.fetch("frisbee")
+Rex.speak(3)
 
 
 
