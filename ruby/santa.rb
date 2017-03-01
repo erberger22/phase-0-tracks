@@ -84,9 +84,3 @@ ron.speak
 
 #p santas
 =end 
-
-
-
-
-
-
