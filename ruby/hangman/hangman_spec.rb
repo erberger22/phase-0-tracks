@@ -35,10 +35,6 @@ describe Hangman_game do
 		expect(game.insert_answer("o")).to eq ["_","_","_","_","o","_"]
 	end
 
-	it "inserts the user guess into the correct location, and returns updated solution" do
-		expect(game.insert_answer("t")).to eq ["_","_","t","t","_","_"]
-	end
-
 
 
 
