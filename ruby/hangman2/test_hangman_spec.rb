@@ -1,4 +1,4 @@
-require_relative 'hangman'
+require_relative 'hangman2'
 
 describe Hangman_game do
 	let (:game) {Hangman_game.new("button")}
@@ -15,4 +15,3 @@ describe Hangman_game do
 		expect(game.num_guess).to eq "button".length * 2
 	end
 
-	
