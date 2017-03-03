@@ -24,7 +24,12 @@ describe Hangman_game do
 	end
 
 	it "inserts the user guess into the correct location, and returns updated solution" do
-		expect(game.insert_answer("o")).to eq "____o_"
+		expect(game.insert_answer("t")).to eq "__tt__"
+	end
+
+	it "returns an updated solution after multiple guesses" do
+		expect(game.insert_answer("t")).to eq "__tt__"
+		expect(game.insert_answer("n")).to eq "__tt_n"
 	end
 
 

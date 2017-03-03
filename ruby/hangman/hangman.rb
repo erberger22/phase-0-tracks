@@ -9,10 +9,11 @@ class Hangman_game
 	end
 
 	def blank_solution
+		blank = ""
 		@word.length.times do 
-			@solution<<"_"
+			blank << "_"
 		end
-		@solution
+		blank
 	end
 
 	def repeat?(user_guess)
@@ -36,11 +37,29 @@ class Hangman_game
 	end
 
 	def insert_answer(user_guess)
-		new_solution = self.blank_solution
-		new_solution[@word.index(user_guess)]=user_guess
-		new_solution
+		word_count = 0
+		until word_count == @word.length
+			#if the userguess is the same as the @word(word_count), then it is added to @solution at that location
+			if user_guess == @word[word_count]
+				@solution[word_count] = user_guess
+			#if the @solution(word_count) is empty where there should be a letter or a _, it adds a _
+			elsif @solution[word_count]==nil
+				@solution[word_count] = "_"
+			#if the @solution(word_count) is not empty, it is left unchanged
+			else
+				@solution[word_count] = @solution[word_count]
+			end
+		word_count += 1
+		end
+		@solution
 	end	
 end
+
+puts "Enter word for game of hangman:"
+word = gets.chomp
+game = Hangman_game.new(word)
+
+
 
 
 
