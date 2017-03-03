@@ -8,14 +8,6 @@ class Hangman_game
 		@guesses = ""
 	end
 
-	#def blank_solution
-	#	blank = ""
-	#	@word.length.times do 
-	#		blank << "_"
-	#	end
-	#	blank
-	#end
-
 	def repeat?(user_guess)
 		if !@guesses.include?(user_guess)
 			false
@@ -90,40 +82,3 @@ if guessed_the_word
 else
 	puts "you didn't get it. better luck next time, looks like you are going to need it!"
 end
-
-
-
-
-
-=begin
-puts "Enter a word to be guessed:"
-word = gets.chomp
-game=Hangman_game.new(word)
-
-guess_count = 0
-total_guesses = game.num_guesses
-until guess_count == total_guesses
-	
-	puts "Guess a letter:"
-	user_guess = gets.chomp
-	if game.repeat(user_guess)
-		puts "you already guessed that letter"
-		guess_count -= 1
-	else
-		game.store_guess(user_guess)	
-	end
-
-	if game.check_guess(user_guess)
-		p game.insert_answer(user_guess)
-	else
-		puts "sorry, wrong answer!"
-		p game.solution
-	end
-	guess_count += 1
-end
-=begin
-test1 = Hangman_game.new("boy")
-p test1.num_guesses
-=end
-
-
