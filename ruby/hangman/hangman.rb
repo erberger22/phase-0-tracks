@@ -1,36 +1,26 @@
 class Hangman_game
 	attr_reader :word
-	attr_accessor :guesses
+	attr_accessor :solution
 	
 	def initialize(word)
 		@word = word
-		@guesses = []
-		@solution_array = []
-
+		@solution = ""
+		@guesses = ""
 	end
 
-	def show_word
-		@word
-	end
-
-	def word_array
-		word_array = @word.split''
-	end
-
-	def num_guesses
-		@word.length*2
-	end
-	
-	def solution
-		word_array.each do
-		@solution_array.push"_"
+	def blank_solution
+		@word.length.times do 
+			@solution<<"_"
 		end
-		@solution_array
-	end	
+		@solution
+	end
 
-	def repeat(user_guess)
-		#return false if user guess is new, return true if user guess repeat
-		@guesses.include?(user_guess)
+	def repeat?(user_guess)
+		if !@guesses.include?(user_guess)
+			false
+		else
+			true
+		end
 	end
 
 	def store_guess(user_guess)
@@ -38,22 +28,24 @@ class Hangman_game
 	end
 
 	def check_guess(user_guess)
-		word_array.include?(user_guess)
+		if @word.include?(user_guess)
+			true
+		else
+			false
+		end
 	end
 
 	def insert_answer(user_guess)
-		solution = self.solution
-		counter = 0
-		until counter == @word.length
-			if word_array[counter] == user_guess 
-				solution[counter] = user_guess
-			end
-			counter += 1
-		end
-		solution
-	end
+		new_solution = self.blank_solution
+		new_solution[@word.index(user_guess)]=user_guess
+		new_solution
+	end	
 end
-#=begin
+
+
+
+
+=begin
 puts "Enter a word to be guessed:"
 word = gets.chomp
 game=Hangman_game.new(word)
