@@ -7,9 +7,9 @@ describe Hangman_game do
 		expect(game.word).to eq "button"
 	end
 
-	it "makes a blank string of '_' for each letter in word" do
-		expect(game.blank_solution).to eq "______"
-	end
+	#it "makes a blank string of '_' for each letter in word" do
+	#	expect(game.blank_solution).to eq "______"
+	#end
 
 	it "compares user guess to the guess array" do
 		expect(game.repeat?("o")).to eq false
