@@ -8,4 +8,8 @@ function reverseString(str) {
     return newString;
 }
 
-var backwardsHello = console.log(reverseString("hello"))
+var backwardsHello = (reverseString("hello"))
+
+if (1 == 1)
+	console.log(backwardsHello)
+
