@@ -98,3 +98,25 @@ end
 
 #=======================================================================
 # Reflection Section
+=begin
+What are the differences between the two different hash syntaxes shown in the state_data file?
+
+-The STATE_DATA hash has strings of the states names as keys and the hash that is the value uses symbols for :population_density and :population. This is good practice because :population_density and :population are repeated for each state and if they were strings it would take more memory to hold each different string, even though they would be identical
+
+What does require_relative do? How is it different from require?
+
+-relative_require will give the location for a linked file and will use the location of the file that is looking for the link as a starting point. In this case, since my_solution and state_data are in the same file, relative_require was a simple way to link them. require does the same thing, but starts at the ruby directory and is better used for requiring gems there.
+
+What are some ways to iterate through a hash?
+
+-the .each and .map methods can be used to iterate through a hash
+
+When refactoring virus_effects, what stood out to you about the variables, if anything?
+
+-We realized that the variables were instance variables and since they were called in the methods that virus_effects ran, there was no need to also pass them in as arguments of virus_effects.
+
+What concept did you most solidify in this challenge?
+
+-Before this challenge I had no concept of DRY code, and I'm sure that some of my older code was not very DRY. This gave me a better sense of what to look for when refactoring code. 
+=end
+
