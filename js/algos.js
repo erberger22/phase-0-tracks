@@ -76,6 +76,34 @@ console.log(key_value_match(object3, object4))
 	//each time will build a random string of length 1-10 and add it to the array
 //return the array
 
+//Code was getting too confusing, so made a seperate function to build my string
+function make_string() {
+	var str = ""
+	for (var j = 0; j < (Math.floor(Math.random()*10+1)); j++){
+			var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+			str += letters.charAt(Math.floor(Math.random()*letters.length))
+		}
+	return str
+}
+//function takes an integer
+function make_array(number){
+	//declare a variable of a blank array
+	var final_array = []
+	//have a loop that runs integer times
+	for (var i = 0; i < (number); i++){
+		//each time will build a random string of length 1-10 and add it to the array
+		final_array.push(make_string())
+	}
+	//return the array
+	return final_array
+}
+var k = "--------------"
+console.log(make_array(4))
+console.log(k)
+console.log(make_array(5))
+console.log(k)
+console.log(make_string())
+
 
 
 
