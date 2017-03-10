@@ -106,11 +106,6 @@ for (var j = 0; j < 10; j++){
 	console.log(longest_string(arr))
 }
 
-
-
-
-
-
-
+//I was able to complete all of the tasks so that they did what the release requested, but I noticed that all of my functions have very narrow scope and I cannot find a way to improve them. longest_string will select the lowest index string in the array in the event of a tie and key_value_match can only check for age and name keys. I tried to write a seond key_value_match that used Object.keys to be able to compare keys for any object but was not able to get it to work quite right, and the assignment said to use simple math, comparisons, and loops anyway. I think it would be useful for me to see an example of better ways to structure the functions if the errors that my code has are avoidable. Thanks!
 
 
