@@ -1,4 +1,4 @@
-//RELEASE 1
+//RELEASE 0
 
 //funtion will loop through the array, and store the .length of each string into a new array
 //Call .max on the new array to find which value is the largest
@@ -29,7 +29,7 @@ console.log(longest_string(array))
 var array_2 = ["Happy Birthday", "to", "you"]
 console.log(longest_string(array_2))
 
-//RELEASE 2
+//RELEASE 1
 
 //function takes 2 objects
 //function returns true if key value of obejct 1 is equal to the key value of object 2, and neither of them equal undefined
@@ -67,6 +67,14 @@ console.log(key_value_match(object1, object4))
 //expect to return true since color is green for both, but will return false since key_value_match can only compare age and name keys
 console.log(key_value_match(object3, object4))
 
+
+//RELEASE 2
+
+//function takes an integer
+//declare a variable of a blank array
+//have a loop that runs integer times
+	//each time will build a random string of length 1-10 and add it to the array
+//return the array
 
 
 
