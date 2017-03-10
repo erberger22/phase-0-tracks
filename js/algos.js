@@ -100,9 +100,11 @@ function make_array(number){
 var k = "--------------"
 console.log(make_array(4))
 console.log(k)
-console.log(make_array(5))
-console.log(k)
-console.log(make_string())
+for (var j = 0; j < 10; j++){
+	var arr = make_array(Math.floor(Math.random()*10+1))
+	console.log(arr)
+	console.log(longest_string(arr))
+}
 
 
 
