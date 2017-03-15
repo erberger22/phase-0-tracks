@@ -27,3 +27,16 @@ Hermitage|901|Red
 5.
 
 DELETE FROM wines WHERE name="Côtes de Provence Rose";
+
+6.
+
+SELECT wines.name, wines.cost, colors.colors FROM wines INNER JOIN colors ON wines.color_id = colors.id;
+Chablis|280|White
+Hermitage|901|Red
+
+SELECT wines.name, wines.cost, colors.colors FROM wines RIGHT JOIN colors ON wines.color_id = colors.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+SELECT wines.name, wines.cost, colors.colors FROM wines LEFT JOIN colors ON wines.color_id = colors.id;
+Chablis|280|White
+Hermitage|901|Red
