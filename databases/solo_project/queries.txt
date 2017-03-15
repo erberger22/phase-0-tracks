@@ -1,0 +1,29 @@
+1. 
+
+sqlite> SELECT * FROM wines;
+1|Chablis|2006-5-22 00:00:00|280|1
+2|Côtes de Provence Rose|2015-5-22 00:00:00|96|2
+3|Hermitage|1997-5-22 00:00:00|900|3
+
+2.
+
+UPDATE wines set cost=901 WHERE name="Hermitage"
+   ...> ;
+
+3.
+
+sqlite> SELECT * FROM wines, colors WHERE wines.color_id = colors.id;
+1|Chablis|2006-5-22 00:00:00|280|1|1|White
+2|Côtes de Provence Rose|2015-5-22 00:00:00|96|2|2|Rosé
+3|Hermitage|1997-5-22 00:00:00|901|3|3|Red
+
+4.
+
+SELECT wines.name, wines.cost, colors.colors FROM wines JOIN colors ON wines.color_id = colors.id;
+Chablis|280|White
+Côtes de Provence Rose|96|Rosé
+Hermitage|901|Red
+
+5.
+
+DELETE FROM wines WHERE name="Côtes de Provence Rose";
