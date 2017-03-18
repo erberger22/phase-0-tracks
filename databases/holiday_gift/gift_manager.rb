@@ -8,14 +8,19 @@ create_table_cmd_1 = <<-SQL
     name VARCHAR(255),
     gift VARCHAR(255),
     cost INT,
-    purchased BOOLEAN
-  )
+    purchased_id INT
+  );
   SQL
 
+create_table_cmd_2 = <<-SQL
+  CREATE TABLE IF NOT EXISTS purchased(
+    id INTEGER PRIMARY KEY,
+    purchased VARCHAR(255)
+  );
+SQL
+
 db.execute(create_table_cmd_1)
+db.execute(create_table_cmd_2)
 
-def add_gift_reciever(db, name, gift, cost, purchased)
-  db.execute("INSERT INTO familymember (name, gift, cost, purchased) VALUES (?, ?, ?, ?)", [name, gift, cost, purchased])
-end
-
-
+db.execute("INSERT INTO purchased (purchased) VALUES ('TRUE')")
+db.execute("INSERT INTO purchased (purchased) VALUES ('FALSE')")
