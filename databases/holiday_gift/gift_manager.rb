@@ -8,7 +8,8 @@ create_table_cmd_1 = <<-SQL
     name VARCHAR(255),
     gift VARCHAR(255),
     cost INT,
-    purchased_id INT
+    purchased_id INT,
+    FOREIGN KEY (purchased_id) REFERENCES purchased(id)
   );
   SQL
 
@@ -21,6 +22,18 @@ SQL
 
 db.execute(create_table_cmd_1)
 db.execute(create_table_cmd_2)
+if db.execute("SELECT * FROM purchased") != [[1, "TRUE"], [2, "FALSE"]]
+	db.execute("INSERT INTO purchased (purchased) VALUES ('TRUE')")
+	db.execute("INSERT INTO purchased (purchased) VALUES ('FALSE')")
+end
 
-db.execute("INSERT INTO purchased (purchased) VALUES ('TRUE')")
-db.execute("INSERT INTO purchased (purchased) VALUES ('FALSE')")
+boolean = db.execute("SELECT * FROM purchased")
+p boolean
+# def add_reciever(db, name, gift, cost)
+#   db.execute("INSERT INTO personal_gift (name, gift, cost, purchased_id) VALUES (?, ?, ?, 2)", [name, gift, cost])
+# end
+
+# add_reciever(db, "Karl", "Drone", 1000)
+
+# present = db.execute("SELECT * FROM personal_gift")
+# puts present
