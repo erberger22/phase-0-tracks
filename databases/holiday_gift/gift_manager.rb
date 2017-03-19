@@ -35,6 +35,7 @@ end
 def update_purchase(db, name)
 	db.execute("UPDATE personal_gift SET purchased_id=1 WHERE name=(?)", [name])
 end
+
 #test
 #update_purchase(db,"Nick")
 
@@ -42,7 +43,7 @@ end
 
 def print_list(db)	
 	present = db.execute("SELECT * FROM personal_gift JOIN purchased ON personal_gift.purchased_id=purchased.id;")
-	
+
 	present.each do |present|
 	 	if present['purchased'] == 0
 	 		puts "You need to buy a #{present['gift']} for #{present['name']}. It costs $#{present['cost']}."
@@ -52,7 +53,59 @@ def print_list(db)
 	end
 end
 
-print_list(db)
+#USER INTERFACE
+puts "Do you need to add someone to your list? (y/n)"
+user_answer = gets.chomp
+if user_answer =="y"
+	loop do
+		puts "Who do you need to buy a gift for?"
+		person = gets.chomp
+		puts "What are you going to be getting for #{person}?"
+		person_gift = gets.chomp
+		puts "How much does #{person_gift} cost?"
+		gift_cost = gets.chomp 
+		add_reciever(db, person, person_gift, gift_cost)
+		puts "do you need to add another person? (y/n)"
+		user_answer = gets.chomp
+		break if user_answer == "n"
+	end
+else
+	print_list(db)
+end
+
+
+puts "Have you purchased any of the gifts on your list?(y/n)"
+user_answer = gets.chomp
+if user_answer == "n"
+	print_list(db)
+else user_answer == "y"
+	loop do
+		puts "Who's gift have you purchased?"
+		name = gets.chomp
+		update_purchase(db, name)
+		puts "Is that the only purchase you have made? (y/n)"
+		done_shopping = gets.chomp
+		break if done_shopping =="y"
+	end
+	print_list(db)
+end
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
