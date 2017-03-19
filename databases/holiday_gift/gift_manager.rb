@@ -32,19 +32,27 @@ def add_reciever(db, name, gift, cost)
   db.execute("INSERT INTO personal_gift (name, gift, cost, purchased_id) VALUES (?, ?, ?, 2)", [name, gift, cost])
 end
 
+def update_purchase(db, name)
+	db.execute("UPDATE personal_gift SET purchased_id=1 WHERE name=(?)", [name])
+end
+#test
+#update_purchase(db,"Nick")
 
-present = db.execute("SELECT * FROM personal_gift JOIN purchased ON personal_gift.purchased_id=purchased.id;")
-# counter = 0
-# p present['purchased'] == 0
+#present = db.execute("SELECT * FROM personal_gift JOIN purchased ON personal_gift.purchased_id=purchased.id;")
 
-present.each do |present|
- 	if present['purchased'] == 0
- 		puts "You need to buy a #{present['gift']} for #{present['name']}. It costs $#{present['cost']}."
- 	elsif present['purchased'] == 1
- 		puts "You bought a #{present['gift']} for #{present['name']}. It cost $#{present['cost']}."
+def print_list(db)	
+	present = db.execute("SELECT * FROM personal_gift JOIN purchased ON personal_gift.purchased_id=purchased.id;")
+	
+	present.each do |present|
+	 	if present['purchased'] == 0
+	 		puts "You need to buy a #{present['gift']} for #{present['name']}. It costs $#{present['cost']}."
+	 	elsif present['purchased'] == 1
+	 		puts "You bought a #{present['gift']} for #{present['name']}. It cost $#{present['cost']}."
+		end
 	end
 end
 
+print_list(db)
 
 
 
