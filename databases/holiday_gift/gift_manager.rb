@@ -2,7 +2,7 @@ require 'sqlite3'
 
 db = SQLite3::Database.new("holidays.db")
 db.results_as_hash = true
-
+#Create tables
 create_table_cmd_1 = <<-SQL
   CREATE TABLE IF NOT EXISTS personal_gift(
     id INTEGER PRIMARY KEY,
@@ -23,11 +23,12 @@ SQL
 
 db.execute(create_table_cmd_1)
 db.execute(create_table_cmd_2)
+#Will only add true and false values into the table if they do not already exist there
 if db.execute("SELECT * FROM purchased") != [[1, true], [2, false]]
 	db.execute("INSERT INTO purchased (purchased) VALUES (1)")
 	db.execute("INSERT INTO purchased (purchased) VALUES (0)")
 end
-
+#Adds new gift reiever, default value for purchased_id so all gifts start as not purchased
 def add_reciever(db, name, gift, cost)
   db.execute("INSERT INTO personal_gift (name, gift, cost, purchased_id) VALUES (?, ?, ?, 2)", [name, gift, cost])
 end
@@ -89,24 +90,4 @@ else user_answer == "y"
 	end
 	print_list(db)
 end
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
