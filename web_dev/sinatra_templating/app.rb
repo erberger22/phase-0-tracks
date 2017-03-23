@@ -21,7 +21,21 @@ end
 # a form
 post '/students' do
   db.execute("INSERT INTO students (name, campus, age) VALUES (?,?,?)", [params['name'], params['campus'], params['age'].to_i])
-  redirect '/'
+  redirect '/welcome'
 end
 
 # add static resources
+get '/welcome' do 
+	@student_name = db.execute("SELECT name FROM students WHERE id = ?", [db.last_insert_row_id])
+	erb :welcome
+end
+
+get '/students/edit/:id' do
+	@student = db.execute("SELECT * FROM students WHERE id = ?", [params['id']])
+	erb :edit_entry
+end
+
+post '/edit_student/:id' do
+	db.execute("UPDATE students SET name = ?, campus = ?, age = ? WHERE id = ?", [[params['name'], params['campus'], params['age'].to_i], params['id']])
+	redirect '/'
+end
